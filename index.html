@@ -1,0 +1,864 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>董事長分享精修通順版｜Jarvis 整理稿</title>
+  <meta name="description" content="董事長分享錄音的精修通順逐字稿，依原始順序整理並標註章節重點。">
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #202018;
+      --muted: #6d675d;
+      --quiet: #8d8577;
+      --line: #ddd4c5;
+      --line-strong: #c4b7a6;
+      --paper: #fbf8f0;
+      --paper-2: #f3ebdc;
+      --surface: #fffdf7;
+      --accent: #1f6f6a;
+      --accent-dark: #164d4a;
+      --gold: #a76f2a;
+      --danger: #8d4539;
+      --shadow: 0 18px 50px rgba(60, 47, 27, 0.11);
+      --measure: 43rem;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--paper);
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(31, 111, 106, 0.055) 0 1px, transparent 1px 100%),
+        linear-gradient(180deg, rgba(167, 111, 42, 0.07), transparent 28rem),
+        var(--paper);
+      background-size: 4rem 4rem, auto, auto;
+      font-family: "Noto Serif TC", "Songti TC", "Microsoft JhengHei", serif;
+      line-height: 1.8;
+      letter-spacing: 0;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: min(100%, 1180px);
+      margin: 0 auto;
+      padding: clamp(24px, 5vw, 56px);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+      gap: clamp(28px, 6vw, 76px);
+      align-items: end;
+      min-height: 56vh;
+      padding: clamp(28px, 7vw, 86px) 0 clamp(28px, 5vw, 54px);
+      border-bottom: 1px solid var(--line-strong);
+    }
+
+    .eyebrow {
+      margin: 0 0 20px;
+      color: var(--accent-dark);
+      font-family: "Microsoft JhengHei", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      max-width: 13ch;
+      margin-bottom: 24px;
+      font-size: clamp(2.35rem, 8vw, 5.8rem);
+      line-height: 1.04;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .hero-copy {
+      max-width: 47rem;
+      color: var(--muted);
+      font-size: clamp(1.02rem, 1.9vw, 1.22rem);
+      line-height: 1.9;
+    }
+
+    .stat-board {
+      border-top: 3px solid var(--ink);
+      background: rgba(255, 253, 247, 0.74);
+      box-shadow: var(--shadow);
+    }
+
+    .stat {
+      display: grid;
+      gap: 4px;
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .stat:last-child { border-bottom: 0; }
+
+    .stat span {
+      color: var(--quiet);
+      font-family: "Microsoft JhengHei", sans-serif;
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+
+    .stat strong {
+      font-size: clamp(1.05rem, 2vw, 1.34rem);
+      line-height: 1.45;
+    }
+
+    .meta {
+      display: grid;
+      gap: 10px;
+      padding: 0;
+      margin: 24px 0 0;
+      list-style: none;
+      color: var(--muted);
+      font-family: "Microsoft JhengHei", sans-serif;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .meta li {
+      display: grid;
+      gap: 3px;
+      padding-left: 14px;
+      border-left: 2px solid var(--line-strong);
+    }
+
+    .meta span {
+      color: var(--quiet);
+      font-weight: 700;
+    }
+
+    .meta strong {
+      color: var(--ink);
+      font-weight: 500;
+      overflow-wrap: anywhere;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: clamp(28px, 5vw, 68px);
+      align-items: start;
+      padding-top: clamp(30px, 5vw, 62px);
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 22px;
+      display: grid;
+      gap: 24px;
+    }
+
+    .panel {
+      border-top: 3px solid var(--accent);
+      background: rgba(255, 253, 247, 0.78);
+      box-shadow: 0 10px 32px rgba(60, 47, 27, 0.08);
+    }
+
+    .panel h2 {
+      margin: 0;
+      padding: 16px 18px 8px;
+      font-family: "Microsoft JhengHei", sans-serif;
+      font-size: 0.86rem;
+      letter-spacing: 0;
+    }
+
+    .toc {
+      display: grid;
+      max-height: calc(100vh - 150px);
+      overflow: auto;
+      scrollbar-width: thin;
+    }
+
+    .toc-link {
+      display: grid;
+      grid-template-columns: 34px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      padding: 13px 16px;
+      border-top: 1px solid var(--line);
+      transition: background 160ms ease, color 160ms ease;
+    }
+
+    .toc-link:hover {
+      background: color-mix(in srgb, var(--accent) 9%, transparent);
+      color: var(--accent-dark);
+    }
+
+    .toc-link span {
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .toc-link strong {
+      font-family: "Microsoft JhengHei", sans-serif;
+      font-size: 0.88rem;
+      font-weight: 650;
+      line-height: 1.55;
+    }
+
+    .main {
+      min-width: 0;
+    }
+
+    .takeaways {
+      margin-bottom: clamp(36px, 7vw, 82px);
+      padding: clamp(22px, 4vw, 36px);
+      border-top: 4px solid var(--ink);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .takeaways h2 {
+      margin-bottom: 16px;
+      font-family: "Microsoft JhengHei", sans-serif;
+      font-size: clamp(1.35rem, 3vw, 2rem);
+      line-height: 1.25;
+    }
+
+    .takeaways ol {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding-left: 1.4rem;
+    }
+
+    .takeaways li {
+      padding-left: 0.2rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .chapter {
+      scroll-margin-top: 24px;
+      padding: clamp(30px, 6vw, 58px) 0;
+      border-top: 1px solid var(--line-strong);
+    }
+
+    .chapter:first-of-type { border-top: 0; }
+
+    .chapter-kicker {
+      color: var(--gold);
+      font-family: "Microsoft JhengHei", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+    }
+
+    .chapter h2 {
+      max-width: 18ch;
+      margin: 8px 0 22px;
+      font-size: clamp(1.75rem, 4.5vw, 3.05rem);
+      line-height: 1.18;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .key-points {
+      width: min(100%, 760px);
+      margin: 0 0 clamp(24px, 4vw, 36px);
+      border-left: 4px solid var(--accent);
+      background: color-mix(in srgb, var(--accent) 7%, var(--surface));
+      padding: 18px clamp(18px, 3vw, 28px);
+    }
+
+    .key-points h3 {
+      margin-bottom: 8px;
+      color: var(--accent-dark);
+      font-family: "Microsoft JhengHei", sans-serif;
+      font-size: 0.92rem;
+      letter-spacing: 0;
+    }
+
+    .key-points ul {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding-left: 1.2rem;
+      color: var(--ink);
+    }
+
+    .key-points li { line-height: 1.75; }
+
+    .transcript {
+      width: min(100%, var(--measure));
+      font-size: clamp(1.02rem, 1.8vw, 1.16rem);
+    }
+
+    .transcript p {
+      margin-bottom: 1.25em;
+      color: color-mix(in srgb, var(--ink) 88%, var(--muted));
+    }
+
+    code {
+      padding: 0.08em 0.3em;
+      border: 1px solid var(--line);
+      background: var(--paper-2);
+      font-family: "Microsoft JhengHei", sans-serif;
+      font-size: 0.9em;
+    }
+
+    .back-top {
+      display: inline-flex;
+      margin: 20px 0 64px;
+      padding: 10px 0;
+      color: var(--accent-dark);
+      border-bottom: 1px solid currentColor;
+      font-family: "Microsoft JhengHei", sans-serif;
+      font-weight: 700;
+    }
+
+    footer {
+      border-top: 1px solid var(--line-strong);
+      padding: 28px 0 12px;
+      color: var(--quiet);
+      font-family: "Microsoft JhengHei", sans-serif;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 860px) {
+      body {
+        background-size: 2.5rem 2.5rem, auto, auto;
+      }
+
+      .page {
+        padding: 20px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding-top: 34px;
+      }
+
+      h1 {
+        max-width: 11ch;
+      }
+
+      .content-grid {
+        display: block;
+        padding-top: 28px;
+      }
+
+      .sidebar {
+        position: static;
+        margin-bottom: 34px;
+      }
+
+      .toc {
+        max-height: none;
+        grid-template-columns: 1fr;
+      }
+
+      .toc-link {
+        grid-template-columns: 32px minmax(0, 1fr);
+        padding: 12px 14px;
+      }
+
+      .takeaways {
+        margin-bottom: 26px;
+      }
+
+      .chapter {
+        padding: 38px 0;
+      }
+
+      .chapter h2 {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .page {
+        padding: 16px;
+      }
+
+      .hero-copy,
+      .transcript {
+        font-size: 1.02rem;
+      }
+
+      .stat-board,
+      .panel,
+      .takeaways {
+        margin-left: -4px;
+        margin-right: -4px;
+      }
+
+      .key-points {
+        margin-left: -2px;
+        padding: 16px 18px;
+      }
+
+      .takeaways ol,
+      .key-points ul {
+        padding-left: 1.15rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page" id="top">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">JARVIS TRANSCRIPT BRIEFING</p>
+        <h1>董事長分享精修通順版</h1>
+        <p class="hero-copy">依董事長原始談話順序整理，保留判斷語氣與關鍵脈絡，補回制度、資金、治理與醫療合規的細節，方便在電腦與手機上連續閱讀。</p>
+        <ul class="meta">
+          <li><span>音檔</span><strong>原始 m4a 錄音檔（本機留存）</strong></li>
+<li><span>錄音長度</span><strong>約 2 小時 5 分 48 秒</strong></li>
+<li><span>整理原則</span><strong>依董事長原本談話順序整理，保留口語、判斷語氣與「我跟你講、對不對、懂意思嗎」這類節奏；刪除明顯贅字、語音辨識迴圈與無意義重複。</strong></li>
+<li><span>專名校正</span><strong>依既有專案脈絡，統一使用「康匯、康瑞、康沐、康樂富」。ASR 中的康慧/康會、康睿/康潤/康位、康木/康睦/康募/康務等音近字已依語境修正。</strong></li>
+<li><span>注意</span><strong>部分人名、地名、現場插話較模糊，已盡量按脈絡整理；若要作正式文件或法律/投資文件，仍建議回聽該段音檔二次校對。</strong></li>
+<li><span>補漏校對</span><strong>已再與原始時間段對照，補回被第一版精修壓縮掉的制度細節、資金層級、轉讓限制、籌備流程與醫療合規風險。</strong></li>
+        </ul>
+      </div>
+      <aside class="stat-board" aria-label="文件概況">
+        <div class="stat"><span>章節</span><strong>17 段完整脈絡</strong></div>
+        <div class="stat"><span>重點</span><strong>59 則可掃讀重點</strong></div>
+        <div class="stat"><span>閱讀模式</span><strong>單頁長文、無滑動時間軸</strong></div>
+      </aside>
+    </header>
+
+    <div class="content-grid">
+      <aside class="sidebar" aria-label="章節導覽">
+        <nav class="panel">
+          <h2>章節導覽</h2>
+          <div class="toc">
+            <a class="toc-link" href="#chapter-01">
+      <span>01</span>
+      <strong>找地點：591 不是答案，前三家店最關鍵</strong>
+    </a>
+<a class="toc-link" href="#chapter-02">
+      <span>02</span>
+      <strong>轉線與合夥人：想進來的人太多，要先篩選</strong>
+    </a>
+<a class="toc-link" href="#chapter-03">
+      <span>03</span>
+      <strong>康瑞投資公司與 SPV：為什麼不要直接把人塞進康沐</strong>
+    </a>
+<a class="toc-link" href="#chapter-04">
+      <span>04</span>
+      <strong>創始股東與董事候選名單：女性、美業、五星、老闆優先</strong>
+    </a>
+<a class="toc-link" href="#chapter-05">
+      <span>05</span>
+      <strong>董監事與公司治理：掛名也要有程序、有出席費、有責任</strong>
+    </a>
+<a class="toc-link" href="#chapter-06">
+      <span>06</span>
+      <strong>投資額與董監事抽選：100 萬、300 萬、50 人上限</strong>
+    </a>
+<a class="toc-link" href="#chapter-07">
+      <span>07</span>
+      <strong>醫美股東的價值：自用、帶客、服務與股權</strong>
+    </a>
+<a class="toc-link" href="#chapter-08">
+      <span>08</span>
+      <strong>讓利給核心夥伴：不要只拿錢，要有人一起做事</strong>
+    </a>
+<a class="toc-link" href="#chapter-09">
+      <span>09</span>
+      <strong>投資規則：沒開成就退，開成就是長期投資</strong>
+    </a>
+<a class="toc-link" href="#chapter-10">
+      <span>10</span>
+      <strong>個人或法人持股：小額用個人，大額再用公司</strong>
+    </a>
+<a class="toc-link" href="#chapter-11">
+      <span>11</span>
+      <strong>公司設立流程：先有股東與錢，再租房、簽約、設診所</strong>
+    </a>
+<a class="toc-link" href="#chapter-12">
+      <span>12</span>
+      <strong>從國基、大樹到直銷：邊做邊長出產品和制度</strong>
+    </a>
+<a class="toc-link" href="#chapter-13">
+      <span>13</span>
+      <strong>診所是門面工程：不一定每個人都要做療程，但場景很重要</strong>
+    </a>
+<a class="toc-link" href="#chapter-14">
+      <span>14</span>
+      <strong>危機案例：退費潮、現金流與斬首行動</strong>
+    </a>
+<a class="toc-link" href="#chapter-15">
+      <span>15</span>
+      <strong>醫療場域的資安與隱私：老闆也不能亂看客戶資料</strong>
+    </a>
+<a class="toc-link" href="#chapter-16">
+      <span>16</span>
+      <strong>大樹、藥局與處方箋：樹大招風，合規更重要</strong>
+    </a>
+<a class="toc-link" href="#chapter-17">
+      <span>17</span>
+      <strong>診所監控與法規邊界：能裝的地方要裝，不能拍的地方絕對不能拍</strong>
+    </a>
+          </div>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <section class="takeaways" aria-labelledby="takeaways-title">
+          <h2 id="takeaways-title">先抓住這五件事</h2>
+          <ol>
+            <li>董事長把未來發展拆成三條主線：地點與診所樣板、康瑞/康匯/康沐的投資治理、醫美場域的合規與風險控管。</li>
+<li>第一波股東不是單純收錢，而是要篩出能帶資源、帶人流、帶信任、能一起做事的人。</li>
+<li>SPV/控股架構的目的，是讓投資、分紅、清算、上市前後的權益分配更清楚，避免股東直接混在診所或營運公司裡。</li>
+<li>醫美診所是門面工程，也是組織與高價產品的信任場景；但療程、資料、監控、儲值與退款都要先守住法規邊界。</li>
+<li>整段分享反覆強調：不是撿現成，而是自己找地點、蓋制度、建公司、帶市場。</li>
+          </ol>
+        </section>
+
+        <section class="chapter" id="chapter-01">
+      <div class="chapter-kicker">第 01 章</div>
+      <h2>找地點：591 不是答案，前三家店最關鍵</h2>
+      <div class="key-points">
+        <h3>重點</h3>
+        <ul>
+          <li>地點是門市與診所最不能將就的東西；服務、價格、設備都能改，location 不能改。</li>
+<li>好地點通常不是掛在 591 一個月還沒人要的物件，要靠掃街、現場看、精挑細選。</li>
+<li>前幾家店若地點抓對，後面複製就順；前三家抓錯，後面會很麻煩。</li>
+        </ul>
+      </div>
+      <div class="transcript">
+        <p>我現在比較有時間了，成功高中那邊的課結束，不然前面三個月真的很忙。接下來找辦公室、找地點，這件事我跟你們講，真的不能隨便。</p>
+<p>找地點不是說你打開 591 看一看就好。好的地點、大的地點，真正有價值的地方，不是那種在 591 上面掛很久還沒人要的。591 上面能看到的，除非剛露出來，不然掛一個月的點，基本上你也不太會想下去。通常我們自己找的點，都不是在 591 掛著等人看的，要去掃街、要去現場看。</p>
+<p>不管你是開店，還是開診所，如果地點沒有開出來，你規劃得再好都沒用。這種東西不能將就，因為開下去不行，沒有效果反而是負面。服務不好可以調整，價格不對可以調整，設備不行也可以調整，可是建築物、外殼、地點、location，這些沒有辦法變。招牌可以變，裡面什麼都可以變，但地點不能變。</p>
+<p>所以做門市生意，location 很重要，尤其前幾家更關鍵。我跟你講，前三家如果抓對，後面通常就順了；前三家如果沒有抓對，後面就會很麻煩，因為很多人根本搞不清楚到底怎麼找地點。</p>
+<p>台北那邊算是他們好運，有些辦公室區域本來我們一開始也想過，後來沒有買成。現在如果台北某些地方 OK，搞不好可以先暫時移過去。你們也可以去看，但那種格局、朝向、距離，還是要現場判斷。台北車站那邊也看過，有些地方太遠，有些地方法規上不能改成診所，那就沒辦法。</p>
+<p>台中也不好找。台中要在熟悉的區域裡找，真的不容易，每一條街都要掃下去。但你現在只要有診所在動，就可以講了。我們只要第一家開始動，就可以講，而且我也不會只開一家。我們做這件事，大家就會知道我們是要開院所、要做連鎖的。</p>
+      </div>
+    </section>
+<section class="chapter" id="chapter-02">
+      <div class="chapter-kicker">第 02 章</div>
+      <h2>轉線與合夥人：想進來的人太多，要先篩選</h2>
+      <div class="key-points">
+        <h3>重點</h3>
+        <ul>
+          <li>第一波想當合夥人、股東、創始成員的人很多，不可能全部收。</li>
+<li>閉鎖型公司股東人數有限，不能把所有人都放進同一家公司。</li>
+<li>要先看意願、能力、資源、人脈與是否能真的幫忙起盤。</li>
+<li>法人代表、董事或核心角色要從會議與名單中產生，不能只是誰帶頭就自然全部算他的。</li>
+        </ul>
+      </div>
+      <div class="transcript">
+        <p>那天我聽到幾個反饋，第一個就是轉線的部分。這個要來當合夥人、有意願的人，不可能全部放進來，太多了。現在只是這些人，如果再講一次，可能更多，一般閉鎖型公司股東也不會有這麼多。你寫四十個、五十個，基本上就滿了，所以一定要篩選。</p>
+<p>這不是說誰想進來就全部進來。你要成立公司，你要有股東架構，你要有投資主體，不然康瑞怎麼成立？康瑞成立之後，股東不是全部直接塞進康沐或診所，這樣股東會會很麻煩，沒有人這樣做。</p>
+<p>以前我們每一家也是這樣，會先成立一個投資公司。大家投資的是這個投資公司，這家公司再去投資標的。這家公司本身不營業，它就是投資業，營業項目可以寫一般投資，也可以寫主要投資康瑞或相關標的。它不用開發票，也不用做日常營業管理，本質上就是一個控股公司、SPV，特殊目的公司。</p>
+<p>帶頭籌備的人可以先出面處理流程，但不代表股份或代表權就全部歸他。法人代表、董事人選，還是要從會議、股東名單與後續抽選裡面找出來，這樣以後才不會說不清楚。</p>
+<p>假設康瑞設定資本額六千萬，實際收到五千萬，那就是實收資本五千萬。之後康瑞第一期可能先投資三千萬，剩下兩千萬可以放定存、ETF 或其他流動性比較好的工具，但不要變成個人喜好投資，不要亂投。這些都要先規劃好。</p>
+      </div>
+    </section>
+<section class="chapter" id="chapter-03">
+      <div class="chapter-kicker">第 03 章</div>
+      <h2>康瑞投資公司與 SPV：為什麼不要直接把人塞進康沐</h2>
+      <div class="key-points">
+        <h3>重點</h3>
+        <ul>
+          <li>康瑞/康沐相關投資應透過投資公司控管，避免股東散亂。</li>
+<li>如果未來上市或需要清算，可按持股比例分配股票或現金。</li>
+<li>SPV 是過渡型與治理型工具，不是拿來短線進出的商品。</li>
+<li>清算前不宜讓股權在外部自由買賣；若要轉讓，也應先在內部股東與既定規則下處理。</li>
+        </ul>
+      </div>
+      <div class="transcript">
+        <p>以後如果有一天康瑞或相關公司三年、五年後要上市，那這個投資公司就可以清算。清算的時候，公司手上的股票或現金，就照持股比例分給大家。你持有 1%、2%，就照比例分給你股票或現金。分到你手上以後，你要賣、要留，就是你自己決定。</p>
+<p>如果不是這樣，而是全部人直接進康沐，股票到底誰持有？有人想賣，有人不想賣，公司到底要不要賣？大家集體決定就會很麻煩。所以這就是 SPV 的意義。它是一個過渡型、特殊目的投資公司，讓投資、管理、未來清算都比較清楚。</p>
+<p>投資下去不是股票市場那種想買就買、想賣就賣。開成之後就是長期投資，沒有一般意義上的退股；如果真的要轉讓，也只能在內部股東、既定價格或約定規則下處理，不能讓外部的人隨便進來，把架構弄亂。</p>
+<p>我一直講，做公司要先把架構弄清楚，不是每天在那邊想一些沒有用的。第一步是你要做什麼行業，這個行業、商業模式可不可行；第二步是錢夠不夠，要不要找股東；第三步才是申請公司、租房子、簽約、設立。沒有公司，你要怎麼租房子？怎麼簽約？這些都要一步一步來。</p>
+      </div>
+    </section>
+<section class="chapter" id="chapter-04">
+      <div class="chapter-kicker">第 04 章</div>
+      <h2>創始股東與董事候選名單：女性、美業、五星、老闆優先</h2>
+      <div class="key-points">
+        <h3>重點</h3>
+        <ul>
+          <li>現場逐一討論候選人，重點不是「誰有錢」而已，而是誰能帶人、帶資源、帶信任。</li>
+<li>醫美投資對女性股東特別有吸引力，因為自用、帶客、形象和人脈都能串起來。</li>
+<li>五星、老闆、有實際消費與組織能力的人會優先被考慮。</li>
+        </ul>
+      </div>
+      <div class="transcript">
+        <p>名單我們要一個一個看。女生其實比男生更適合，尤其醫美這件事，女性的戰鬥力會比男生強。男生如果只是帥、朋友多，不一定有用；女生如果自己會用、朋友也會用，她的觸角和信任感不一樣。</p>
+<p>所以名單裡面，老闆型、五星、有七口、有女性人脈、有美業或醫療背景的，都要先看。有人買了五星、買了好幾口，公司出事的時候也沒有亂，只是說等到貨就好，這種人就很重要。這種叫金主型，也可能是組織型，不能不給他機會。</p>
+<p>但是人很多，不能全部寫上去。五十個名額很快就滿了，還有人沒有寫上去。五星有優先資格，老闆有優先資格，女生老闆也有優先資格。可是最後還是要篩選，有些可以二選一，有些直系親屬就不要都放，有些人要看他到底是不是會做。</p>
+<p>我以前開美家之前，股東開幕三個月內如果沒有推薦、沒有做到一定業績，我們股份就收回。診所如果沒有如預期順利開幕，股東資金也會退。以前說要做飲料，後來決定不做，錢也是退回去。這就是遊戲規則要先講清楚。</p>
+      </div>
+    </section>
+<section class="chapter" id="chapter-05">
+      <div class="chapter-kicker">第 05 章</div>
+      <h2>董監事與公司治理：掛名也要有程序、有出席費、有責任</h2>
+      <div class="key-points">
+        <h3>重點</h3>
+        <ul>
+          <li>董監事不是隨便掛名，會涉及公司法、書面決議、出席費與重大決策。</li>
+<li>小公司常常沒有真的開會，但一旦有人追究，文書程序就會變成風險。</li>
+<li>康瑞、康匯、康沐未來要做大，治理文件要比以前乾淨。</li>
+<li>康瑞國際承接的是海外、生醫、醫學與品牌形象，不只是多開一家公司。</li>
+        </ul>
+      </div>
+      <div class="transcript">
+        <p>董監事最低一年也要有出席費，例如一年給十二萬。公司有賺錢就給，虧損就沒有。不是用分紅的名義，而是董監事出席費、車馬費、參與公司治理的費用。如果公司賺超過預算，也可以再加一點比例，給三十萬、五十萬都有可能。</p>
+<p>我跟你講，我從以前到現在，開這種公司沒有賠過錢。可是即使這樣，董監事、監察人還是要設計好。監察人平常看起來沒事幹，但他的功能很重要，就是監督公司。平常也許只是開董事會、蓋章、通過決議，可是文件要存在。</p>
+<p>很多小公司其實都沒有真的開董事會，會計師幫忙做文件，八九成公司都這樣。可是如果被人告，就會被翻出來看。之前有人告我開董事會有問題，剛好那次我是真的有開，反而沒事；但如果他追到以前那些紀錄，就會變成文書風險。這種事你不要覺得無聊，真的出事會很麻煩。</p>
+<p>所以未來康瑞國際、康匯、康沐這些公司，不能再用以前小公司的做法。要開海外，要做生醫、醫學、生技，要有形象、有專業、有社會信任感。康瑞國際這種公司，要找比較穩重的人；康匯或康沐的董事，也要看投資額、專業背景和能不能真的代表公司。</p>
+<p>康瑞國際未來如果要去海外，例如馬來西亞或其他市場，就可以用台灣的康瑞國際去投資海外子公司。它的角色比較偏醫療專業、國際市場與品牌形象，所以不能只用業績好不好來看人，還要看穩重度、專業經理能力和社會信任感。</p>
+      </div>
+    </section>
+<section class="chapter" id="chapter-06">
+      <div class="chapter-kicker">第 06 章</div>
+      <h2>投資額與董監事抽選：100 萬、300 萬、50 人上限</h2>
+      <div class="key-points">
+        <h3>重點</h3>
+        <ul>
+          <li>一般股東可能是 50 萬或 100 萬級，董監事可能要 300 萬以上。</li>
+<li>若想當董監事的人超過名額，必須抽籤或依條件篩選。</li>
+<li>這不是單純賣名額，而是用公平制度避免事後爭議。</li>
+<li>50 萬比較像身份型、體驗型名額；100 萬以上才比較接近正式股東參與。</li>
+        </ul>
+      </div>
+      <div class="transcript">
+        <p>如果當董監事，就可能要 300 萬以上；如果不當董監事，可能就是 100 萬。當然不是說你想當就一定當得到，因為名額有限，最多五十個，本來可能四十個，最多也就五十個。多出來就要篩掉，想當董監事的也要抽，抽到才上來。</p>
+<p>50 萬的名額可以有，但它比較像是一次性的身份、參與感或試水溫；人一多，50 萬也會占一個名額，所以不能無限制開放。100 萬是比較正式的基本參與，300 萬以上才進入董監事候選與治理角色的討論。</p>
+<p>有些人適合，是因為他有醫療背景、有二十年經驗；有些人有錢，但不一定適合。有些人只能 100 萬，那就不能當完整董監事。300 萬不是小錢，是真的要有閒錢，不是借錢硬湊。</p>
+<p>我跟你講，這個東西很像選擇權。假設今天十塊錢的股票，以後真的上市，一張不用多，賣一百塊就好，就多很多錢。賠的機會很少，但如果中，就不是小數字。可是你要講清楚，這是長期投資，不是保證馬上賺，也不是想退就退。</p>
+      </div>
+    </section>
+<section class="chapter" id="chapter-07">
+      <div class="chapter-kicker">第 07 章</div>
+      <h2>醫美股東的價值：自用、帶客、服務與股權</h2>
+      <div class="key-points">
+        <h3>重點</h3>
+        <ul>
+          <li>醫美診所股東不只是財務投資，還有自用、省錢、帶客、股東身份和轉介紹價值。</li>
+<li>女性股東特別容易理解這個價值，因為變漂亮、服務體驗和人脈推薦可以連在一起。</li>
+<li>但療程抽成與醫療服務要有控管，不能讓一般會員隨便出去賣療程。</li>
+        </ul>
+      </div>
+      <div class="transcript">
+        <p>診所股東有直接好處。高端療程可能六十萬、八十萬，如果股東帶客人進來，中間可能有業務獎金或顧問報酬。但這不是讓每個會員都出去抽成，這會有法規問題。只有股東、只有被控管的人，才可以用適當方式參與。</p>
+<p>女生來投資醫美診所很好用。她自己可以省錢，有公關券，可以找朋友去，也有中間的服務價值，以後還有分紅、股權。自己投資美麗，自己也變現，這個想像力比單純買產品更強。</p>
+<p>如果一個女生原本就願意買七口，那投資 50 萬或 100 萬成為股東，對她來說更有價值。錢不是不見，還是在股權裡。她可以自己做醫美、做康匯、做會員，幾乎不用額外花太多，還有可能分錢、分獎金。</p>
+<p>但我也要講清楚，醫美不是亂搞。設備型療程看起來是設備在做，但法律上還是要有醫師、護理師、牌照和流程。股東自用可以設計在不影響客人的時段，但不能對外亂賣，不能變成一般會員隨便賣醫療服務。</p>
+<p>董事長特別講到，設備型療程的耗材成本和售價落差很大，所以股東自用的想像空間很強：可以安排在離峰或沒有客人的時段，用股東身份享受服務。但這件事不能講成「外面隨便賣療程」，因為法律上仍然牽涉醫師、護理師、醫療牌照與操作流程，制度要先鎖住。</p>
+      </div>
+    </section>
+<section class="chapter" id="chapter-08">
+      <div class="chapter-kicker">第 08 章</div>
+      <h2>讓利給核心夥伴：不要只拿錢，要有人一起做事</h2>
+      <div class="key-points">
+        <h3>重點</h3>
+        <ul>
+          <li>公司其實可以自己開，但這次是把利潤讓出去，讓更多人站在同一陣線。</li>
+<li>找房子、跑行政、做 PM、聯絡名單，都應該有費用或感謝金。</li>
+<li>要一開始把遊戲規則寫好，不然做事的人和只等分錢的人會不公平。</li>
+        </ul>
+      </div>
+      <div class="transcript">
+        <p>這次不一樣。我們有一些負面要讓正面去超越，所以要把利潤讓出去、把福利讓出去，讓更多人跟我們站在同一陣線。這叫讓利。不然公司自己開就好了，為什麼要讓大家進來？</p>
+<p>如果有人幫忙找點、處理行政、當專案 PM、跑事務所、找辦公室，公司都會給獎金、感謝金或顧問費。不是說股東董事長每天工作十二小時，其他股東吃喝玩樂，最後分錢一樣，這說不過去。遊戲規則要先寫好。</p>
+<p>有些人會講什麼股東每個月要拿幾百萬給公司做廣告、公關費，我聽了都覺得好笑。全世界哪有股東每個月還要拿錢給公司？股東是出資，不是每個月贊助公司。公司給你錢還有道理，你給公司錢，這種講法我第一次聽過。</p>
+<p>所以原則很簡單：該出資就出資，該做事就有做事的費用，該分紅就分紅。不要把公款拿去報私人沒用的帳，不要把股東講成還要每月補貼公司的角色。</p>
+      </div>
+    </section>
+<section class="chapter" id="chapter-09">
+      <div class="chapter-kicker">第 09 章</div>
+      <h2>投資規則：沒開成就退，開成就是長期投資</h2>
+      <div class="key-points">
+        <h3>重點</h3>
+        <ul>
+          <li>診所若沒有籌備成功、沒有開出來，資金要退回。</li>
+<li>開成之後，就是長期投資，不存在想退就退。</li>
+<li>股東應該是會消費、會帶人、會利用身份發展組織的人，不只是純投資客。</li>
+<li>第一波確定後會通知匯款到籌備處；沒有在期限內匯款，就視同沒有保留名額。</li>
+        </ul>
+      </div>
+      <div class="transcript">
+        <p>你們跟大家講的時候，就講幾個重點。第一，診所如果沒有籌備成功、沒有開出來，不管中途花了多少成本，原則上資金要退回，成本公司承擔。以前我們說要做飲料，後來花了幾百萬決定不做，錢也是我們自己吸收，沒有叫股東承擔。</p>
+<p>第二，我們希望股東是有消費、有經營、有醫美需求、會利用股東身份發展組織的人。純投資、不參與診所、不參與通路的人，我們不一定要。你如果只是想投錢但不想用、不想做、不想帶人，那你去買股票就好了。</p>
+<p>第三，投資下去就是長期投資，沒有退股這件事。賺了就分，不賺就放著。未來如果上市，公司可以清算，把現金和股票照比例分給股東；分到你手上以後，你要賣、要留，就是你自己決定。</p>
+<p>第四，這是一個特殊目的投資架構，不要讓內部架構混亂。股東名冊最多五十個，確定之後就要匯款。第一波會先通知名單，款項先匯到籌備處，因為公司還在流程裡；希望一個禮拜內完成匯款、作業、簽約，沒有匯款就視同沒有保留名額。匯款後再找一天大家來簽合作協議、簽名、入股。</p>
+      </div>
+    </section>
+<section class="chapter" id="chapter-10">
+      <div class="chapter-kicker">第 10 章</div>
+      <h2>個人或法人持股：小額用個人，大額再用公司</h2>
+      <div class="key-points">
+        <h3>重點</h3>
+        <ul>
+          <li>100 萬左右用個人持有即可，稅務和管理都比較簡單。</li>
+<li>300 萬、500 萬以上，才比較需要考慮法人。</li>
+<li>架構不是為了複雜而複雜，是為了未來稅務、租約、股東治理與投資清楚。</li>
+        </ul>
+      </div>
+      <div class="transcript">
+        <p>一百萬而已，不是一千萬。如果一年分 40%，也就是 40 萬，其實個人稅負沒有那麼誇張。除非你投資到 300 萬、500 萬以上，才需要考慮用公司。我的習慣是 500 萬以下的小金額投資用個人，500 萬以上再用法人。</p>
+<p>像以前有人叫我用個人買六億股權，這在法律和稅務上就不合理。哪一個個人有六億現金去買股？六億如果一年分 10%，就是六千萬，個人稅負可能非常高，這種一定要用公司。小額和大額做法不一樣。</p>
+<p>所以你們要把這張表做到最後，把遊戲規則講清楚。以後可能還會有其他新診所、新構思，也是同樣模式。不要什麼都我來講，你們自己要會講，會跟自己的下線、核心夥伴說明。</p>
+<p>康樂富自己來開當然也合理，幹嘛搞那麼複雜？只是這次為了讓更多人一起參與、帶來人流、穩定業績，所以才用 SPV，把特殊目的股東納進來。這叫散財聚人，把利潤放出去，讓潮水聚進來。</p>
+<p>如果五十個名額太滿，董監事或核心成員也可能另外拉出來，放在比較小的持股層裡。董事長一直提醒，平常公司超過十個股東，開會就已經很麻煩；五十個人開股東會，會變成好幾桌，所以架構要提前想好，不然以後每次決議都會拖慢。</p>
+      </div>
+    </section>
+<section class="chapter" id="chapter-11">
+      <div class="chapter-kicker">第 11 章</div>
+      <h2>公司設立流程：先有股東與錢，再租房、簽約、設診所</h2>
+      <div class="key-points">
+        <h3>重點</h3>
+        <ul>
+          <li>股東名單與資金到位後，才能申請公司、用公司名義租房與簽約。</li>
+<li>康沐、康匯、康瑞各公司層級要分清楚，便於稅務與後續治理。</li>
+<li>董事長強調自己是「蓋廟」的人，不是接別人現成香火的廟公。</li>
+        </ul>
+      </div>
+      <div class="transcript">
+        <p>接下來就是申請公司。公司流程跑完，才可以用公司去租房子、簽約、設立。沒有公司，你怎麼租房子？怎麼簽約？所以股東成員確定、錢進來，下個禮拜就進入公司申請。公司三到幾天就可以下來，名片也同步做。</p>
+<p>第一關是康沐，第二關是康匯，之後再把錢匯到康瑞，康瑞再去申請登記。以後出去租房子，可能就是康瑞租房子、康瑞擺設備，到時候再設立診所。這是一個架構，不是一般人想像的那麼簡單，但做好以後稅務和治理都會比較好規劃。</p>
+<p>很多人以為開公司很簡單，是因為你只是做業務工作。你看前面要把產品做出來、把公司架構蓋好、把場地弄好，要多久？有些人是在別人的廟裡當廟公，覺得每天很多香客都來找他，以為那些人是因為他來的。其實不是，是因為那個廟已經蓋了一百年、兩百年，位置和香火都在那裡。</p>
+<p>我們不一樣。我們從以前到現在都是自己蓋廟的人。不是撿現成，不是接別人的香火。地點要自己找，制度要自己做，公司要自己建，市場要自己跑。</p>
+      </div>
+    </section>
+<section class="chapter" id="chapter-12">
+      <div class="chapter-kicker">第 12 章</div>
+      <h2>從國基、大樹到直銷：邊做邊長出產品和制度</h2>
+      <div class="key-points">
+        <h3>重點</h3>
+        <ul>
+          <li>董事長回顧過去創業經驗，強調一開始不一定知道所有產品，但方向和制度要對。</li>
+<li>高價保健品、抗老產品只靠網路不好賣，需要人、組織、信任與場景。</li>
+<li>康樂富有舊基礎，若重新起盤，前三個月就可能看到高聘快速破百萬。</li>
+<li>他用國基、燕窩微商與 2022 年直銷啟動經驗，說明產品與制度可以邊做邊長出來。</li>
+        </ul>
+      </div>
+      <div class="transcript">
+        <p>我們不是撿現成，都是每一件事情從一開始做。我以前本來退休了，錢也夠花，沒有一定要再出來做。但後來大家一直講，覺得我不做很可惜，我才又出來搞。</p>
+<p>那時候要做直銷，很多人問你到底要賣什麼。我跟你講，哪一個創業者一開始就全部知道要賣什麼？你要先知道產業方向，邊蓋邊走，產品和模式會出現。厲害的人就是這樣，一邊做一邊找到適合市場的東西。</p>
+<p>他回頭講國基成立時的經驗：錢進來之後，先把公司與場地蓋起來，六千萬裡面可能先拿三千萬做建置，產品和市場策略則是一邊做一邊修。不是一開始什麼都知道，而是方向對、架構對，就會在過程中長出產品。</p>
+<p>我們後來設計出產品，遇到疫情，大家也以為會很慘。可是制度一改，第三個月就爆發。以前微商賣燕窩，也是這樣，看起來什麼都沒有，大家卻用搶的。做生意有時候就是很神奇，只要方向對、制度對，困難反而會變成爆發點。</p>
+<p>燕窩微商那段，他講得很有感覺：看起來只有一個產品，卻可以幾個月賣到很大的量，甚至一天營收一千多萬，還是不能刷卡、要收現金的年代。這不是在炫耀單一產品，而是在講「組織、信任、制度」一旦跑起來，市場反應會比外人想像快很多。</p>
+<p>直銷為什麼重要？因為高價保健品、抗老產品，不能只靠網路店面賣。網路上賣的東西大家都覺得便宜，高價值產品一定要透過人介紹、組織、信任來賣。所以我們才回到直銷，才有辦法把高價產品賣掉。</p>
+<p>現在你們有康樂富的舊基礎，有微商基礎、有會員基礎。如果重新開始跑，三個月後高聘要破百萬不是不可能。以前娜姐那樣跑，第四、第五個月到第七、第八個月就已經破上來了。這一次多了診所門面，邏輯更完整。</p>
+      </div>
+    </section>
+<section class="chapter" id="chapter-13">
+      <div class="chapter-kicker">第 13 章</div>
+      <h2>診所是門面工程：不一定每個人都要做療程，但場景很重要</h2>
+      <div class="key-points">
+        <h3>重點</h3>
+        <ul>
+          <li>診所是信任場景，不是每個組織領導者都要自己做醫美。</li>
+<li>男性領導者不一定要活在診所裡，但他可以把有需求的人導進診所。</li>
+<li>診所門面會讓產品、會員、服務與組織更容易被理解。</li>
+        </ul>
+      </div>
+      <div class="transcript">
+        <p>這次不一樣，診所要弄好，因為它是很重要的門面工程。你不一定每個療程都要做，但門面要在。以前有些男生自己也沒有去醫美、沒有去診所消費，但他下面的人有需求，業績照樣可以破百萬。男生不需要整天活在診所裡，沒意義。</p>
+<p>做組織的人在外面輔導、做說明，把有需求的人導到診所。診所做得不錯，想要經營的人就會來找你，邏輯就是這樣。這又回到我以前創造奇蹟的模式：不是每個人都要做同一件事，而是把場景、產品、制度、人連起來。</p>
+<p>過去有些股東覺得換成直銷、分紅會更好，但前一兩年可能要補貼、還沒錢賺，就退掉。結果後來公司越做越大，他又覺得賣飛了。這種事很多，所以遊戲規則一開始就要講清楚，不要事後反悔。</p>
+      </div>
+    </section>
+<section class="chapter" id="chapter-14">
+      <div class="chapter-kicker">第 14 章</div>
+      <h2>危機案例：退費潮、現金流與斬首行動</h2>
+      <div class="key-points">
+        <h3>重點</h3>
+        <ul>
+          <li>醫美或健康產業一旦出重大事件，退費潮會像銀行擠兌一樣。</li>
+<li>老闆若被收押或主帥被斬首，公司決策與現金流都會失控。</li>
+<li>做醫療健康產業不能只看營收，也要看合規、資料、危機處理。</li>
+<li>醫療業若大量做預收、儲值，一旦信任崩掉，退費壓力會直接變成現金流危機。</li>
+        </ul>
+      </div>
+      <div class="transcript">
+        <p>你看現在一些醫美公司出事，老闆被收押，旗下幾十家診所如果開始退費，會很恐怖。照理說有些療程用了不能退，可是發生重大事件之後，消費者保護、輿論、檢舉就會連環效應。資金可能已經拿去做資產，現金卡住，老闆又在裡面，全部事情沒人決定，員工就慌了。</p>
+<p>董事長還補了一層：直銷有退貨期間與商品邏輯，但醫療本來比較接近單次結算。市場上很多醫美會做儲值、預收，平常大家覺得沒事；可是一旦發生重大事件，消費者恐慌、政府要求、媒體壓力一起來，儲值就會被抽掉，現金流會被打穿。</p>
+<p>這跟銀行擠兌一樣。主帥被斬首，公司就群龍無首，下面的人為了自保，什麼話都可能亂講。所以我才說，不要讓自己陷入斬首行動。以前有人想攻擊我，也是想用媒體、滅證、羈押這些手法，讓公司群龍無首。</p>
+<p>可是事情到最後，真相都會出來。你只要架構清楚、資料清楚、沒有真的做那些事，攻擊就不一定有效。反過來，如果你自己的治理不乾淨、資料亂、法規亂，那一出事就很難收。</p>
+      </div>
+    </section>
+<section class="chapter" id="chapter-15">
+      <div class="chapter-kicker">第 15 章</div>
+      <h2>醫療場域的資安與隱私：老闆也不能亂看客戶資料</h2>
+      <div class="key-points">
+        <h3>重點</h3>
+        <ul>
+          <li>診所客戶資料、術前術後照、療程紀錄，都需要專人保管。</li>
+<li>老闆不能因為是老闆就隨便看客戶身體資料或診療區影像。</li>
+<li>不知情偷拍與醫療紀錄拍攝是完全不同的事。</li>
+        </ul>
+      </div>
+      <div class="transcript">
+        <p>你不是老闆就可以看。就算有女明星去我們診所做分析，有報片、有資料，我也不敢說我要看。我們沒有那麼好奇，因為這些東西是資安管理，客戶資料不能亂看。</p>
+<p>術前術後照、隆乳前後照，那是醫療紀錄，人家知道你拍，也有流程、有專人保管。但如果是不知情的情況被拍，那就很嚴重。人家在換衣服、在做療程，你偷偷拍，這個性質完全不同。</p>
+<p>老闆本來就不應該進診療區。就算我去診所，我也是在外面客人區，不會進到診療區，也不會去看那些資料。醫療區是管制區，工作人員才可以進，股東、老闆、外部人都不能亂進。</p>
+<p>所以未來我們診所一定要把這件事管好。資料要有人負責，權限要清楚，不要因為老闆、股東、主管想看，就讓他看。這是基本底線。</p>
+      </div>
+    </section>
+<section class="chapter" id="chapter-16">
+      <div class="chapter-kicker">第 16 章</div>
+      <h2>大樹、藥局與處方箋：樹大招風，合規更重要</h2>
+      <div class="key-points">
+        <h3>重點</h3>
+        <ul>
+          <li>董事長用大樹藥局、處方箋與藥品銷售舉例，說明規模越大越容易被盯上。</li>
+<li>過去市場很多做法大家都默認，但公司大了之後不能再用僥倖心態。</li>
+<li>行業大咖若出事，會釋放市場空間，但也提醒自己不能犯同樣錯。</li>
+<li>他也提到寵物醫療供應、資安帳務與同業檢舉，都是大公司變成靶子的警訊。</li>
+        </ul>
+      </div>
+      <div class="transcript">
+        <p>像藥局賣藥這種事，以前流程可能很簡單，客人說要買威而鋼，藥局就拿給你，一盒賺幾百塊。但標準流程應該是什麼？要先看診、醫生開處方箋，再拿處方箋去藥局買。大家以前可能都這樣做，沒事，可是公司一大，就不一樣。</p>
+<p>他還用大樹相關新聞舉例：寵物如果需要氧氣，醫院沒有供應，客人被導去指定藥局或通路購買，這種供應關係一大就很容易被質疑；再加上如果曾經發生資安、帳務或廠商對帳問題，外部就會把所有舊問題一起翻出來。</p>
+<p>樹大招風。大樹越大，越容易被檢舉、被盯上。你以前小店這樣做沒人管，大公司這樣做就會被放大。很多時候不是一開始營收成長、EPS 好就代表安全，風向一變，整個市場看法就會變。</p>
+<p>這裡他的重點不是單罵某一家公司，而是提醒：規模大之後，敵人也會變多。同業可能會用檢舉、蒐證、針對流程漏洞去攻擊你，就像平台賣家互相檢舉一樣。公司越大，越不能靠「大家以前都這樣」來保護自己。</p>
+<p>行業大咖如果出事，對我們要進的市場來說，可能反而空出很多錢、很多客戶。但你不能只看到機會，也要看到風險。別人出事，就是提醒我們：合規、流程、處方箋、資料管理、退款規則，全部都要抓住。</p>
+      </div>
+    </section>
+<section class="chapter" id="chapter-17">
+      <div class="chapter-kicker">第 17 章</div>
+      <h2>診所監控與法規邊界：能裝的地方要裝，不能拍的地方絕對不能拍</h2>
+      <div class="key-points">
+        <h3>重點</h3>
+        <ul>
+          <li>大廳、調劑區、藥品區可以裝監控，便於追查錯誤與安全管理。</li>
+<li>客人會脫衣服、涉及隱私部位或療程隱私的地方，不能裝、不能拍。</li>
+<li>做醫療健康生意，最怕小地方沒抓好，最後變成重大刑責或集體求償。</li>
+        </ul>
+      </div>
+      <div class="transcript">
+        <p>診所要不要裝監視器？大廳要裝，調劑區要裝，藥品區也要裝。為什麼？萬一調錯藥、護理師出錯、客人有糾紛，到時候可以追。安全管理要有影像。</p>
+<p>可是只要客人會把衣服脫下來的地方，就不能裝。療程室、診間，只要會拍到身體隱私，就不要亂拍。這很簡單。能裝的地方要裝，不能裝的地方絕對不能裝。你不要覺得只是小事，這種事一旦出問題，一個人告你、十個人告你、一百個人告你，罪就疊上去。</p>
+<p>做這個行業，要先把很多東西抓住。不然你以為只是監視器、只是資料、只是小疏忽，最後可能變成很大的法律問題。以前我們做這行很久，這些都懂，所以更不能犯這種錯。診間、療程室這種地方，我以前就不敢亂放設備、不敢亂拍。真的要小心，因為醫療健康產業就是這樣，細節抓不好，很容易出事。</p>
+      </div>
+    </section>
+
+        <a class="back-top" href="#top">回到頁首</a>
+      </main>
+    </div>
+
+    <footer>
+      由 Jarvis 依錄音逐字稿整理。若需作正式法律、投資或對外文件，請搭配原始音檔二次校對。
+    </footer>
+  </div>
+</body>
+</html>
